@@ -1,6 +1,10 @@
 ﻿using AestheticsAPI.AestiLibrary;
+using AestheticsAPI.Custom_Libraries.SlackPayload;
+using AestheticsAPI.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -17,15 +21,20 @@ namespace AestheticsAPI.Controllers
         }
 
         // GET: api/Fullwidth/5
-        public string Get(string id)
+        public SlackMessage Get(string id)
         {
-            //dynamic inJSON = JsonConvert.DeserializeObject();
+            //create the SlackMessage
+            SlackMessage message = new SlackMessage(FullwidthConverter.convert(id), "AestheticBot", true);
 
+            return message;
+
+            //This block below is the proof-of-concept testing the Fullwidth library.
+            /*
             FullwidthConverter fwc = new FullwidthConverter();
 
             string converted = fwc.convert(id);
             return converted;
-            //return "This command is not supported.";
+            */
         }
 
         // POST: api/Fullwidth
