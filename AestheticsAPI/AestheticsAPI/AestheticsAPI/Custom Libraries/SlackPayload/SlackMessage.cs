@@ -12,12 +12,20 @@ namespace AestheticsAPI.Custom_Libraries.SlackPayload
         public string text { get; set; }
         public string username { get; set; }
         public Boolean mrkdwn { get; set; }
+        public string response_type { get; set; }
 
-        public SlackMessage(string txt, string un, bool md)
+        //Static references for response type
+        //in_channel means that a message is visible to all in the channe;
+        public static string in_channel = "in_channel";
+        //ephemeral means the message is only visible to the user
+        public static string ephemeral = "ephemeral";
+
+        public SlackMessage(string txt, string un, bool md, string rt)
         {
             text = txt;
             username = un;
             mrkdwn = md;
+            response_type = rt;
 
             cleanPayload();
         }

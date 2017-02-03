@@ -21,12 +21,12 @@ namespace AestheticsAPI.Controllers
         }
 
         // GET: api/Fullwidth/5
-        public SlackMessage Get(string id)
+        public string Get(string id)
         {
             //create the SlackMessage
-            SlackMessage message = new SlackMessage(FullwidthConverter.convert(id), "AestheticBot", true);
+            //SlackMessage message = new SlackMessage(FullwidthConverter.convert(id), "AestheticBot", true);
 
-            return message;
+            return "Please use the HTTP POST Slack Command method, not HTTP GET.";
 
             //This block below is the proof-of-concept testing the Fullwidth library.
             /*
@@ -38,10 +38,18 @@ namespace AestheticsAPI.Controllers
         }
 
         // POST: api/Fullwidth
-        public void Post([FromBody]string value)
+        // The POST on this controller outputs a Slack-consumable JSON.
+        // WebAPI doesn't play nice with the formatting of Slack's application/x-www-form-urlencoded with the [FromBody] prop- resulting in a null in value.
+        //The solution was to accept the incoming HTTP POST as a HttpRequestMessage, then extract the data from the request.Content.
+        public SlackMessage Post(/*[FromBody]string value*/ HttpRequestMessage request)
         {
-            
-            return;
+            //process the HTML post body and process it in a SlackPayload
+            SlackPayload inSlack = new SlackPayload(request.Content.ReadAsStringAsync().Result);
+
+            //send out a new slack message
+            SlackMessage message = new SlackMessage(FullwidthConverter.convert(inSlack.text), "AestheticBot", true, SlackMessage.in_channel);
+
+            return message;
         }
 
         // PUT: api/Fullwidth/5
