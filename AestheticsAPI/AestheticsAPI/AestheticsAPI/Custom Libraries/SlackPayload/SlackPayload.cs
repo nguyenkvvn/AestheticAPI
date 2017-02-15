@@ -69,6 +69,7 @@ namespace AestheticsAPI.Custom_Libraries.SlackPayload
             
         }
 
+        //incomplete- this method cleans a string to un-escape characters sent over HTML.
         public static String sanitize(string s)
         {
             string sN = s;

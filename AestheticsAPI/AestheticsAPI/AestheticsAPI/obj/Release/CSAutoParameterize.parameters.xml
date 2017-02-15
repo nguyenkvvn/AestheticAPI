@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-AestheticsAPI-20170130060242.mdf;Initial Catalog=aspnet-AestheticsAPI-20170130060242;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\nguye\\Dropbox\\\[F]\ 2\ Work\\\[F]\ Rice\ Paddy\ Apps\\AestheticAPI\\AestheticsAPI\\AestheticsAPI\\AestheticsAPI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>

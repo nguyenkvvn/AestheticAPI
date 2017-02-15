@@ -1,0 +1,25 @@
+<manifest alg="2" build="2017.0.1.363" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster" exportTarget="other" domain="aestheticAPI.gucc.io" resolutions="1x" timestamp="1486707456435">
+  <folder name="css">
+    <file name="site_global.css" crc="443350757"/>
+    <file name="master_a-master.css" crc="168047504" ref="usage:index"/>
+    <file name="usage.css" crc="3895501562" ref="usage"/>
+    <file name="index.css" crc="4213597219" ref="index"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index:usage"/>
+    <file name="museutils.js" crc="4148063285" ref="index:usage"/>
+    <file name="whatinput.js" crc="86476730" ref="index:usage"/>
+    <file name="museconfig.js" crc="172512987" ref="index:usage"/>
+    <file name="jquery.watch.js" crc="437028206" ref="index:usage"/>
+    <file name="jquery.musemenu.js" crc="3765830709" ref="index:usage"/>
+    <file name="webpro.js" crc="3986320349" ref="index:usage"/>
+    <file name="musewpdisclosure.js" crc="3865010892" ref="index:usage"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index:usage"/>
+    <file name="require.js" crc="4159430777" ref="index:usage"/>
+  </folder>
+  <folder name="images">
+    <file name="a-master-favicon.ico" crc="4137944994" ref="index"/>
+  </folder>
+  <file name="index.html" crc="332999214" seo="true" mt="1486704824478" redirect="true"/>
+  <file name="usage.html" crc="4232238392" seo="true" mt="1486704824478" redirect="true"/>
+</manifest>

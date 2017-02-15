@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="aestheticsapi-staging" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\nguye\\Dropbox\\\[F]\ 2\ Work\\\[F]\ Rice\ Paddy\ Apps\\AestheticAPI\\AestheticsAPI\\AestheticsAPI\\AestheticsAPI\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\nguye\\Dropbox\\\[F]\ 2\ Work\\\[F]\ Rice\ Paddy\ Apps\\AestheticAPI\\AestheticsAPI\\AestheticsAPI\\AestheticsAPI\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-AestheticsAPI-20170130060242.mdf;Initial Catalog=aspnet-AestheticsAPI-20170130060242;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\nguye\\Dropbox\\\[F]\ 2\ Work\\\[F]\ Rice\ Paddy\ Apps\\AestheticAPI\\AestheticsAPI\\AestheticsAPI\\AestheticsAPI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>
